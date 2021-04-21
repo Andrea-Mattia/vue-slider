@@ -1,2 +1,7 @@
-console.log('JS Ok');
-console.log('Vue', Vue);
+/**
+ * Descrizione
+ * Rifare l'esercizio dello slider come fatto assieme in classe.
+ * Bonus
+ * Applicare l'autoplay allo slider: ogni 3 secondi, cambia immagine automaticamente.
+ */
+
