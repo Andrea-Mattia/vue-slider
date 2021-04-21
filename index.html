@@ -29,10 +29,11 @@
             </div>
 
             <div class="nav">
-                <i class="fas fa-circle active"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
+                <i class="fas fa-circle" 
+                    v-for="(image, index) in images" 
+                    :class="{active: index == imgIndex}" 
+                    @click="setImg(index)"
+                ></i>
             </div>
         </section>
     </div>

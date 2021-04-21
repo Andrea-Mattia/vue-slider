@@ -18,16 +18,24 @@
     },
     methods: {
         prevImg() {
+            // decremento l'indice delle img
             this.imgIndex--;
+            // se < 0 lo setto a images.length - 1
             if (this.imgIndex < 0) {
                 this.imgIndex = this.images.length - 1;
             }
         },
         nextImg() {
+            // incremento l'indice delle img
             this.imgIndex++;
+            // se > images.length - 1 lo setto a 0
             if (this.imgIndex > this.images.length - 1) {
                 this.imgIndex = 0;
             }
+        },
+        setImg(index) {
+            // quando clicco setto l'indice uguale a quello dell'immagine
+            this.imgIndex = index;
         },
     },
 });
