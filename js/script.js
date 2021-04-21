@@ -20,6 +20,9 @@
     created() {
         this.startLoop();
     },
+    mounted () {
+        document.addEventListener("keyup", this.arrowKeyNav);
+    },
     methods: {
         prevImg() {
             // decremento l'indice delle img
@@ -48,6 +51,13 @@
         },
         stopLoop() {
             clearInterval(this.intervalID);
+        },
+        arrowKeyNav() {
+            if (event.keyCode == 39) {
+                this.nextImg();
+            } else if (event.keyCode == 37) {
+                this.prevImg();
+            }
         },
     },
 });
