@@ -15,6 +15,10 @@
             './img/img4.jpg',
         ],
         imgIndex: 0,
+        intervalID: 0,
+    },
+    created() {
+        this.startLoop();
     },
     methods: {
         prevImg() {
@@ -36,6 +40,14 @@
         setImg(index) {
             // quando clicco setto l'indice uguale a quello dell'immagine
             this.imgIndex = index;
+        },
+        startLoop() {
+            this.intervalID = setInterval(() => {
+                this.nextImg();
+            }, 3000);
+        },
+        stopLoop() {
+            clearInterval(this.intervalID);
         },
     },
 });

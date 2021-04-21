@@ -15,7 +15,10 @@
 <body>
     
     <div id="app">
-        <section class="slider">
+        <section class="slider" 
+            @mouseenter="stopLoop" 
+            @mouseleave="startLoop"
+        >
             <div class="prev" @click="prevImg">
                 <i class="fas fa-chevron-circle-left"></i>
             </div>
