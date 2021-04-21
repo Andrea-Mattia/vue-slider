@@ -16,15 +16,15 @@
     
     <div id="app">
         <section class="slider">
-            <div class="prev">
+            <div class="prev" @click="prevImg">
                 <i class="fas fa-chevron-circle-left"></i>
             </div>
 
             <div class="images">
-                <img src="./img/img1.jpg" alt="img1">
+                <img :src="images[imgIndex]" alt="lorem">
             </div>
 
-            <div class="next">
+            <div class="next" @click="nextImg">
                 <i class="fas fa-chevron-circle-right"></i>
             </div>
 
